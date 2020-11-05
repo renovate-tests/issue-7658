@@ -4,6 +4,7 @@
   "rangeStrategy": "update-lockfile",
   "additionalBranchPrefix": "{{parentDir}}-",
   "prHourlyLimit": 0,
+  "recreateClosed": true,
   "lockFileMaintenance": {
     "schedule": ["every weekday"],
     "enabled": true,
