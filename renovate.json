@@ -1,0 +1,63 @@
+{
+  "extends": ["config:base"],
+  "labels": ["dependencies"],
+  "rangeStrategy": "update-lockfile",
+  "additionalBranchPrefix": "{{parentDir}}-",
+  "prHourlyLimit": 0,
+  "lockFileMaintenance": {
+    "schedule": ["every weekday"],
+    "enabled": true,
+    "automerge": true
+  },
+  "patch": {
+    "automerge": true
+  },
+  "minor": {
+    "automerge": true
+  },
+  "packageRules": [
+    {
+      "groupName": "apollo/graphql",
+      "packagePatterns": ["apollo", "graphql"],
+      "excludePackagePatterns": ["^@graphql-codegen"]
+    },
+    {
+      "groupName": "aws",
+      "packagePatterns": ["aws-"]
+    },
+    {
+      "groupName": "babel",
+      "packagePatterns": ["babel"]
+    },
+    {
+      "groupName": "codegen",
+      "packagePatterns": ["^@graphql-codege"]
+    },
+    {
+      "groupName": "eslint",
+      "packagePatterns": ["eslint"]
+    },
+    {
+      "groupName": "react",
+      "packagePatterns": [
+        "^react-scripts$",
+        "^react$",
+        "^react-dom$",
+        "^@types/react$",
+        "^@types/react-dom$"
+      ]
+    },
+    {
+      "groupName": "serverless",
+      "packagePatterns": ["serverless"]
+    },
+    {
+      "groupName": "storybook",
+      "packagePatterns": ["storybook"]
+    },
+    {
+      "groupName": "testing library",
+      "packagePatterns": ["^@testing-library/"]
+    }
+  ]
+}
